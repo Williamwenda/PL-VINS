@@ -910,16 +910,27 @@ LSDDetectorC()
 }
 ;
 
-struct LSDOptions{
-    int    refine;
-    double scale;
-    double sigma_scale;
-    double quant;
-    double ang_th;
-    double log_eps;
-    double density_th;
-    int    n_bins;
-    double min_length;
+// struct LSDOptions{
+//     int    refine;
+//     double scale;
+//     double sigma_scale;
+//     double quant;
+//     double ang_th;
+//     double log_eps;
+//     double density_th;
+//     int    n_bins;
+//     double min_length;
+// } options;
+
+// upgrade to opencv 4 with new functions
+struct LSDOptions{  
+    int length_threshold;    
+    float distance_threshold;  
+    double canny_th1;  
+    double canny_th2;  
+    int canny_aperture_size;  
+    bool do_merge;  
+    double min_length;  
 } options;
 
 /** @brief Creates ad LSDDetectorC object, using smart pointers.

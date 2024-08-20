@@ -73,4 +73,6 @@
 
 #include "line_descriptor_custom.hpp"
 
+#include <opencv2/ximgproc.hpp>
+
 #endif
